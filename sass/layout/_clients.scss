@@ -1,0 +1,46 @@
+.clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients__thumb {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border: 1px solid var(--brand-color);
+        color: var(--brand-color);
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

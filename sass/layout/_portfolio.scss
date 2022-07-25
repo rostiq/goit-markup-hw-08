@@ -1,0 +1,104 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 0;
+    gap: 8px;
+}
+
+.portfolio__filter {
+     margin-bottom: 50px;
+ }
+
+.filter__buttons {
+    color: inherit;
+    padding: 6px 22px;
+    background-color: #f5f4fa;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        background: var(--brand-color);
+        color: #fff;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.portfolio__set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.portfolio__card {
+    width: 370px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.portfolio__thumb {
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio__meta {
+    padding: 20px 24px;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+.portfolio__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio__applying {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-top: 4px;
+}
+
+.portfolio__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding: 63px 24px;
+    background: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__card:hover {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property: color, background-color, box-shadow, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .portfolio__overlay {
+        transform: translateY(0);
+    }
+}
