@@ -27,5 +27,23 @@ button {
     }
 }
 
+.mobile__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    fill: inherit;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+        fill: var(--brand-color)
+    }
+
+        @media (min-width:768px) {
+        display: none;
+    }
+}
 
 

@@ -1,5 +1,9 @@
 .header__logo {
+
+    @media (min-width:1200px) {
     margin-right: 93px;
+    }
+    
 }
 
 .header {
@@ -7,15 +11,42 @@
 }
 
 .header__inner {
-    height: 80px;
     display: flex;
+    height: 60px;
+    justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 768px) {
+        height: 80px;
+        align-items: center;
+    }
+}
+
+.header__mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
 }
 
 .nav__list {
+    display: none;
+
+    @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     gap: 50px;
+    }
+}
+
+.nav__list--column {
+    text-align: left;
+}
+
+.nav__item--mobile {
+    margin-bottom: 30px;
 }
 
 .nav__link{
@@ -26,6 +57,14 @@
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
+
+    &--mobile {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.175;
+        letter-spacing: 0.02em;
+        
+    }
 
     &--current {
     color: var(--brand-color);
@@ -44,18 +83,59 @@
 }
 
 .contacts--row {
+    display: none;
+
+    @media (min-width:768px) {
     display: flex;
-    margin-left: auto;
-    gap: 27px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: end;
+    }
+
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        gap: 27px;
+    }
+
 }
 
-.contacts__links--medium {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: #757575;
-    display: flex;
+.contacts--column {
+    display: block;
+    margin-bottom: 60px;
+}
+
+.contacts__item {
+    margin-bottom: 30px;
+}
+
+.contacts__links{
+
+    &--medium {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: #757575;
+        display: flex;
+    }
+
+    &--large {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.175;
+        letter-spacing: 0.02em;
+        color: #757575;
+    }
+
+    &--phone {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.175;
+        letter-spacing: 0.02em;
+        color: #2196F3;    
+    }
 }
 
 .header__icon {
@@ -64,4 +144,22 @@
     &--less-distance {
             margin-right: 7px;
         }
+
+}
+
+.mobile-menu__inner {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 48px 40px;
+    max-height: 100%;
+}
+
+.mobile-menu__social-list {
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--brand-color);
 }

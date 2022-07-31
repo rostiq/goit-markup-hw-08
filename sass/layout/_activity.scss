@@ -1,4 +1,9 @@
 .activity {
+    display: none;
+
+    @media (min-width:1200px){
+        display: block;
+    }
 
     &__title {
         font-weight: 700;
@@ -11,7 +16,9 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 
     &__item {

@@ -4,22 +4,43 @@
 
 .team__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.142;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media (min-width:768px){
+        margin-bottom: 50px;
+    }
+
+    @media (min-width:1200px){
+        font-size: 36px;
+        line-height: 1.17;
+    }
+
+
 }
 
 .team__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .team__card {
+    max-width: 450px;
     background: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+        @media (min-width: 768px) {
+                max-width: 354px;
+            }
+        @media (min-width: 1200px) {
+                max-width: 270px;
+        }
 }
 
 .team__member {

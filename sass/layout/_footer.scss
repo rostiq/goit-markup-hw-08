@@ -10,14 +10,37 @@
 
 .footer__inner {
     display: flex;
-    justify-content: space-between;
-    gap: 70px;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+
+    @media (min-width:768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 738px;
+        margin: 0 auto;
+    }
+
+        @media (min-width:1200px) {
+        justify-content: space-between;
+        text-align: left;
+        flex-wrap: nowrap;
+        max-width: 1170px;
+        gap: 70px;
+    }
 }
 
 .contacts--column {
     display: flex;
     flex-direction: column;
     gap: 9px;
+
+    @media (min-width: 1200px){
+        width: 231px;
+        margin-bottom: auto;
+    }
 }
 
 .contacts__links {
@@ -32,7 +55,19 @@
 }
 
 .join {
-    margin-top: 12px;
+
+    @media (min-width: 768px) {
+        margin-top: 5px;
+        margin-left: 105px;
+        
+    }
+
+    @media (min-width: 1200px) {
+        margin-top: 12px;
+        margin-left: 0;
+        margin-bottom: auto;
+
+    }
 }
 
 .join__title {
@@ -47,15 +82,34 @@
 
 .join__list {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
-.subscription {
-    margin-top: 9px;
-    margin-left: 23px;
+.subscription__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 1200px){
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 23px;
+    }
+
+}
+
+.subscription__interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width:1200px) {
+        flex-direction: row;
+    }
 }
 
 .subscription__input {
+    margin: 0 auto;
     font-family: inherit;
     font-weight: 400;
     font-size: 16px;
@@ -66,11 +120,22 @@
     padding: 14px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    margin-right: 12px;
-    width: 358px;
+    width: 100%;
+    max-width: 450px;
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+        width: 450px;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 358px;
+            margin-right: 12px;
+            margin-bottom: auto;
+        }
 
     &:focus,
     &:hover {
@@ -84,6 +149,7 @@
         line-height: 1.25;
         color: rgba(255, 255, 255, 0.6);
     }
+
 }
 
 .subscription__label {
