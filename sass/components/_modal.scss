@@ -78,19 +78,21 @@
         background: var(--brand-color-buttons-hover);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
-        &--mobile {
-            background: #fff;
-            border: none;
-            position: absolute;
-            top: 20px;
-            right: 26px;
-            &:hover,
-            &:focus,
-            &:active {
+
+    &--mobile {
+        background: #fff;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 26px;
+        outline: none;
+        &:hover,
+        &:focus,
+        &:active {
                 
-                fill: var(--brand-color);
-            }
+            fill: var(--brand-color);
         }
+    }
 }
 
 
